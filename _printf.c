@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	va_list ptr;
 	int i = 0, sum = 0;
 
-	if (format == NULL)
+	if (format == NULL || format[1] == '\0')
 		return (-1);
 	va_start(ptr, format);
 	while (format && format[i] != '\0')
