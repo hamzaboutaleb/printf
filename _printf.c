@@ -9,6 +9,9 @@ int _printf(const char *format, ...)
 {
 	va_list ptr;
 	int i = 0;
+	
+	if (!format)
+		return (-1);
 
 	va_start(ptr, format);
 	while (format && format[i])
