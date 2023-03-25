@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ptr;
-	int i = 0, int sum = 0;
+	int i = 0, sum = 0;
 
 	if (!format)
 		return (-1);
