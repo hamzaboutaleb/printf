@@ -26,8 +26,10 @@ int _printf(const char *format, ...)
 				break;
 			}
 		}
-
-		_putchar(format[i]);
+		else
+		{
+			_putchar(format[i]);
+		}
 		i++;
 	}
 
