@@ -16,6 +16,11 @@ int _printf(const char *format, ...)
 	va_start(ptr, format);
 	while (format && format[i] != '\0')
 	{
+		while (format[i] != '\0' && format[i] != '%')
+		{
+			_putchar(format[i++]);
+			sum++;
+		}
 		if (format[i] == '%' && format[i + 1])
 		{
 			i++;
@@ -35,13 +40,8 @@ int _printf(const char *format, ...)
 					sum += 2;
 				break;
 			}
+			i++;
 		}
-		else
-		{
-			_putchar(format[i]);
-			sum++;
-		}
-		i++;
 	}
 
 	va_end(ptr);
