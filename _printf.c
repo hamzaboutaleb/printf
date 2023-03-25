@@ -1,9 +1,9 @@
 #include <stdarg.h>
+#include "main.h"
 
 int _printf(const char *format, ...)
 {
 	va_list ptr;
-	char *specif = "cs%";
 	int i = 0;
 
 	va_start(ptr, format);
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 					_putchar('%');
 				break;
 				case 'c':
-					_putchar(va_arg(ptr, char));
+					_putchar(va_arg(ptr, int));
 				break;
 				case 's':
 					print_str(va_arg(ptr, char *));
