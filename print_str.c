@@ -3,6 +3,7 @@
 /**
   * print_str - print string
   * @s: string
+  * Return: lenght of string
   */
 int print_str(char *s)
 {
