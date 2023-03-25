@@ -9,15 +9,10 @@
 int _printf(const char *format, ...)
 {
 	va_list ptr;
-	int i = 0;
-	int sum = 0;
-	int leng = strlen(format);
+	int i = 0, int sum = 0;
 
 	if (!format)
 		return (-1);
-	if (leng == 0)
-		return (0);
-
 	va_start(ptr, format);
 	while (format && format[i] != '\0')
 	{
@@ -27,19 +22,16 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case '%':
-					_putchar('%');
-					sum++;
+					_putchar('%'), sum++;
 				break;
 				case 'c':
-					_putchar(va_arg(ptr, int));
-					sum++;
+					_putchar(va_arg(ptr, int)), sum++;
 				break;
 				case 's':
 					sum += print_str(va_arg(ptr, char *));
 				break;
 				default:
-					_putchar('%');
-					_putchar(format[i]);
+					_putchar('%'), _putchar(format[i]);
 					sum += 2;
 				break;
 			}
