@@ -4,7 +4,7 @@
   * print_str - print string
   * @s: string
   */
-void print_str(char *s)
+int print_str(char *s)
 {
 	int i = 0;
 
@@ -13,4 +13,5 @@ void print_str(char *s)
 		_putchar(s[i]);
 		i++;
 	}
+	return (i);
 }

@@ -14,10 +14,8 @@ int main(void)
     unsigned int ui;
     void *addr;
 
-    len = _printf("Let's try to printf a simple %s.\n", "sentence");
-    len2 = printf("Let's try to printf a simple %s.\n", "sentence");
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
+    len = _printf("%s.\n", "sentence");
+    len2 = printf("%s.\n", "sentence");
     printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     return (0);
