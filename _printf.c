@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdlib.h>
 #include "main.h"
 /**
   * _printf - printf function
@@ -10,8 +11,10 @@ int _printf(const char *format, ...)
 	va_list ptr;
 	int i = 0, sum = 0;
 
-	if (!format)
+	if (format == NULL)
 		return (-1);
+	if (format[1] == '\0')
+		return 0
 	va_start(ptr, format);
 	while (format && format[i] != '\0')
 	{
