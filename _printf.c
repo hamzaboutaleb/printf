@@ -1,13 +1,16 @@
 #include <stdarg.h>
 #include "main.h"
-
+/**
+  * _printf - printf function
+  * @format: tring format
+  * Return: length of string
+  */
 int _printf(const char *format, ...)
 {
 	va_list ptr;
 	int i = 0;
 
 	va_start(ptr, format);
-	
 	while (format && format[i])
 	{
 		if (format[i] == '%' && format[i + 1])
