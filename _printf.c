@@ -24,21 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			switch (format[i])
-			{
-				case '%':
-					_putchar('%'), sum++;
-				break;
-				case 'c':
-					_putchar(va_arg(ptr, int)), sum++;
-				break;
-				case 's':
-					sum += print_str(va_arg(ptr, char *));
-				break;
-				default:
-					_putchar('%'), _putchar(format[i]), sum += 2;
-				break;
-			}
+			sum += printer(format[i], ptr);
 			i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '\0')
