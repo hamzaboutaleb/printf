@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	va_list ptr;
 	int i = 0, sum = 0;
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	if (format == NULL)
 		return (-1);
 	va_start(ptr, format);
 	while (format[i] != '\0')
@@ -37,14 +37,13 @@ int _printf(const char *format, ...)
 					return (-1);
 				break;
 				default:
-					if (format[i] == ' ' && !format[i + 1])
-					{	va_end(ptr);
-						return (-1);
-					}
 					_putchar('%'), _putchar(format[i]), sum += 2;
 				break;
-			} i++;
+			}
+			i++;
 		}
+		else if (format[i] == '%' && format[i + 1] == '\0')
+			return (-1);
 	}
 	va_end(ptr);
 	return (sum);
