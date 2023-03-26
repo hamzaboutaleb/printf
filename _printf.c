@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == '\0')
 		{
 			va_end(ptr);
-			return (sum);
+			return (-1);
 		}
 	}
 	va_end(ptr);
