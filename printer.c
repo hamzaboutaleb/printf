@@ -1,10 +1,16 @@
 #include <stdarg.h>
 #include "main.h"
-
+/**
+ * printer - print to stdout
+ * @c: character to check
+ * @ptr: fromwe can get value to print
+ * Return: length of string
+ */
 int printer(char c, va_list ptr)
 {
-    int sum = 0;
-    switch (c)
+	int sum = 0;
+
+	switch (c)
 	{
 		case '%':
 			_putchar('%'), sum++;
@@ -19,5 +25,5 @@ int printer(char c, va_list ptr)
 			_putchar('%'), _putchar(c), sum += 2;
 		break;
 	}
-    return sum;
+	return (sum);
 }
