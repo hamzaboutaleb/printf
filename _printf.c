@@ -40,8 +40,7 @@ int _printf(const char *format, ...)
 					return (-1);
 				break;
 				default:
-					_putchar('%'), _putchar(format[i]);
-					sum += 2;
+					_putchar('%'), _putchar(format[i]), sum += 2;
 				break;
 			}
 			i++;
