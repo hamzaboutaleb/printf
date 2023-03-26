@@ -8,9 +8,15 @@
 int print_str(char *s)
 {
 	int i = 0;
+	char *s = "(null)";
+
 	if (s == NULL)
 	{
-		print_str("(null)");
+		for (i = 0; s[i] != '\0'; i++)
+		{
+			_putchar(s[i]);
+		}
+		return (6);
 	}
 	while (s[i] != '\0')
 	{
