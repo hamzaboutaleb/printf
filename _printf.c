@@ -41,6 +41,8 @@ int _printf(const char *format, ...)
 						_putchar('%'), _putchar(format[i]);
 						sum += 2;
 					}
+					else
+						return (-1);
 				break;
 			}
 			i++;
