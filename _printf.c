@@ -35,13 +35,6 @@ int _printf(const char *format, ...)
 				case 's':
 					sum += print_str(va_arg(ptr, char *));
 				break;
-				case '\0':
-					return (-1);
-				break;
-				case ' ':
-					if (!format[i + 1])
-						return (-1);
-				break;
 			}
 			i++;
 		}
