@@ -18,8 +18,8 @@ int _printf(const char *format, ...)
 	{
 		while (format[i] != '\0' && format[i] != '%')
 		{
-			_putchar(format[i++]);
-			sum++;
+			_putchar(format[i]);
+			sum++, i++;
 		}
 		if (format[i] == '%' && format[i + 1])
 		{
