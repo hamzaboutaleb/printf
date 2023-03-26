@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 					sum += print_str(va_arg(ptr, char *));
 				break;
 				case '\0':
+					va_end(ptr);
 					return (-1);
 				break;
 				default:
