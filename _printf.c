@@ -42,8 +42,6 @@ int _printf(const char *format, ...)
 			}
 			i++;
 		}
-		else
-			return (-1);
 	}
 
 	va_end(ptr);
