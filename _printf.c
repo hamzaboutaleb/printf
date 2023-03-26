@@ -21,8 +21,9 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			sum++, i++;
 		}
-		if (format[i] == '%' && (format[i + 1] == '\0' || (format[i + 1] == ' ' && !format[i + 2])))
-			return (-1);
+		if (format[i] == '%')
+			if (!format[i + 1] || (format[i + 1] == ' ' && !format[i + 2])
+				return (-1);
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
