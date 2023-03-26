@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(ptr, format);
-	while (format && format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		while (format[i] != '%' && format[i] != '\0')
 		{
@@ -35,9 +35,12 @@ int _printf(const char *format, ...)
 				case 's':
 					sum += print_str(va_arg(ptr, char *));
 				break;
-				default:
-					_putchar('%'), _putchar(format[i]);
-					sum += 2;
+				case '\0':
+					return (-1);
+				break;
+				case ' ':
+					if (!format[i + 1])
+						return (-1);
 				break;
 			}
 			i++;
