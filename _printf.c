@@ -35,12 +35,13 @@ int _printf(const char *format, ...)
 				case 's':
 					sum += print_str(va_arg(ptr, char *));
 				break;
-			}
-
-			if (is_alpha(format[i]))
-			{
-				_putchar('%'), _putchar(format[i]);
-				sum += 2;
+				default:
+					if (is_alpha(format[i]) == 1)
+					{
+						_putchar('%'), _putchar(format[i]);
+						sum += 2;
+					}
+				break;
 			}
 			i++;
 		}
