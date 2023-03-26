@@ -8,13 +8,13 @@
 int print_str(char *s)
 {
 	int i = 0;
-	char *s = "(null)";
+	char *ss = "(null)";
 
 	if (s == NULL)
 	{
-		for (i = 0; s[i] != '\0'; i++)
+		for (i = 0; ss[i] != '\0'; i++)
 		{
-			_putchar(s[i]);
+			_putchar(ss[i]);
 		}
 		return (6);
 	}
