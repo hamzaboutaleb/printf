@@ -36,13 +36,8 @@ int _printf(const char *format, ...)
 					sum += print_str(va_arg(ptr, char *));
 				break;
 				default:
-					if (is_alpha(format[i]) == 1)
-					{
-						_putchar('%'), _putchar(format[i]);
-						sum += 2;
-					}
-					else
-						return (-1);
+					_putchar('%'), _putchar(format[i]);
+					sum += 2;
 				break;
 			}
 			i++;
