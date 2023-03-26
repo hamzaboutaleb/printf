@@ -35,6 +35,10 @@ int _printf(const char *format, ...)
 				case 's':
 					sum += print_str(va_arg(ptr, char *));
 				break;
+				default:
+					_putchar('%'), _putchar(format[i]);
+					sum += 2;
+				break;
 			}
 			i++;
 		}
