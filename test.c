@@ -1,7 +1,7 @@
-#include <stdio.>
+#include <stdio.h>
 #include "main.h"
 int main(void)
 {
-	int u = _convert(4, 2);
-	_prrint("%i\n", u);
+	char u = _convert(4, 2);
+	_prrint("%s\n", u);
 }
