@@ -5,4 +5,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_str(char *);
 int printer(char c, va_list ptr);
+
+char *_tostring(int n, char *s);
 #endif
