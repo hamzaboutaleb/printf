@@ -26,6 +26,9 @@ int printer(char c, va_list ptr)
 		case 'i':
 			sum += print_str(_tostring(va_arg(ptr, int), buf));
 		break;
+		case 'd':
+			sum += print_str(_tostring(va_arg(ptr, int), buf));
+		break;
 		default:
 			_putchar('%'), _putchar(c), sum += 2;
 		break;
