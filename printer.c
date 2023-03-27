@@ -36,7 +36,6 @@ int printer(char c, va_list ptr)
 		case 'b':
 			conv = _convert(number, base);
 			sum += print_str(conv);
-			free(conv);
 		break;
 		default:
 			_putchar('%'), _putchar(c), sum += 2;
