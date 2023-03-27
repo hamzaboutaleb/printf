@@ -12,7 +12,7 @@ int printer(char c, va_list ptr)
 	int sum = 0;
 	char buf[32];
 	unsigned int base = 2;
-	unsigned int number = va_arg(ptr, int);
+	unsigned int number;
 	char *conv;
 
 	switch (c)
@@ -28,12 +28,11 @@ int printer(char c, va_list ptr)
 		break;
 /*abdelghani */
 		case 'i':
-			sum += print_str(_tostring(va_arg(ptr, int), buf));
-		break;
 		case 'd':
 			sum += print_str(_tostring(va_arg(ptr, int), buf));
 		break;
 		case 'b':
+			number = va_ard(ptr, int);
 			conv = _convert(number, base);
 			sum += print_str(conv);
 		break;
