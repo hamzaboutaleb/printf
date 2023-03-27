@@ -11,6 +11,7 @@ int printer(char c, va_list ptr)
 	int sum = 0;
 	char buf[32];
 	unsigned int base = 2;
+	unsigned int number = va_arg(ptr, int);
 
 	switch (c)
 	{
@@ -31,7 +32,7 @@ int printer(char c, va_list ptr)
 			sum += print_str(_tostring(va_arg(ptr, int), buf));
 		break;
 		case 'b':
-			sum += print_str(_convert(va_arg(ptr, int), base));
+			sum += print_str(_convert(number, base));
 		break;
 		default:
 			_putchar('%'), _putchar(c), sum += 2;
