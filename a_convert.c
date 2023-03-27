@@ -9,27 +9,27 @@
  */
 char *_convert(unsigned int num, unsigned int base)
 {
-char *str;
-    unsigned int tmp = num;
-    int digits = 0;
+	char *str;
+	unsigned int tmp = num;
+	int digits = 0;
 
-    while (tmp > 0)
-    {
-        tmp = tmp / base;
-        digits++;
-    }
+	while (tmp > 0)
+	{
+		tmp = tmp / base;
+		digits++;
+	}
 
-str = malloc(sizeof(char) * (digits + 1));
-    if (str == NULL)
-        return (NULL);
-    str[digits] = '\0';
-digits--;
-    while (digits >= 0)
-    {
-        str[digits] = "0123456789abcdef"[num % base];
-        num = num / base;
-digits--;
-    }
+	str = malloc(sizeof(char) * (digits + 1));
+	if (str == NULL)
+		return (NULL);
+	str[digits] = '\0';
+	digits--;
+	while (digits >= 0)
+	{
+		str[digits] = "0123456789abcdef"[num % base];
+		num = num / base;
+		digits--;
+	}
 
-    return (str);
+	return (str);
 }
