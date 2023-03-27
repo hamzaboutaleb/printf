@@ -32,7 +32,7 @@ int printer(char c, va_list ptr)
 			sum += print_str(_tostring(va_arg(ptr, int), buf));
 		break;
 		case 'b':
-			number = va_ard(ptr, int);
+			number = va_arg(ptr, int);
 			conv = _convert(number, base);
 			sum += print_str(conv);
 		break;
