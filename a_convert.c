@@ -23,11 +23,11 @@ char *_convert(unsigned int num, unsigned int base)
 	if (str == NULL)
 		return (NULL);
 	if (num == 0)
-        {
-                str[0] = '0';
-                str[1] = '\0';
+	{
+		str[0] = '0';
+		str[1] = '\0';
 		return (str);
-        }
+	}
 	str[digits] = '\0';
 	digits--;
 	while (digits >= 0)
