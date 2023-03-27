@@ -2,7 +2,6 @@
 #include "main.h"
 int main(void)
 {
-	int i = 203;
-	_printf("%i\n", i);
-
+	char u = _convert(4, 2);
+	_prrint("%s\n", u);
 }
