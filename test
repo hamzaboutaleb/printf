@@ -2,6 +2,8 @@
 #include "main.h"
 int main(void)
 {
-	char u = _convert(4, 2);
-	_prrint("%s\n", u);
+	unsigned int i = 7, b = 2;
+	char *u = _convert(i, b);
+	printf("%s\n", u);
+	_printf("%b\n",7);
 }

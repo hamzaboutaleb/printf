@@ -10,7 +10,7 @@ int printer(char c, va_list ptr)
 {
 	int sum = 0;
 	char buf[32];
-
+	unsigned int base = 2;
 	switch (c)
 	{
 		case '%':
@@ -28,6 +28,9 @@ int printer(char c, va_list ptr)
 		break;
 		case 'd':
 			sum += print_str(_tostring(va_arg(ptr, int), buf));
+		break;
+		case 'b':
+			sum += print_str(_convert(va_arg(ptr, int), base));
 		break;
 		default:
 			_putchar('%'), _putchar(c), sum += 2;

@@ -23,8 +23,8 @@ str = malloc(sizeof(char) * (digits + 1));
     if (str == NULL)
         return (NULL);
     str[digits] = '\0';
-
-    while (digits > 0)
+digits--;
+    while (digits >= 0)
     {
         str[digits] = "0123456789abcdef"[num % base];
         num = num / base;
