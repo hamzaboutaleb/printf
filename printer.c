@@ -11,6 +11,7 @@ int printer(char c, va_list ptr)
 	int sum = 0;
 	char buf[32];
 	unsigned int base = 2;
+
 	switch (c)
 	{
 		case '%':
